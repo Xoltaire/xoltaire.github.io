@@ -32,7 +32,7 @@
   </head>
 
   <body style="margin : 0px; overflow: hidden;">
-    <div class="arjs-loader"><div>Loading, please wait for your shoes...</div></div>
+    <div class="arjs-loader"><div>Loading, please wait for your Lego's...</div></div>
 
     <a-scene
       vr-mode-ui="enabled: false;"
@@ -42,19 +42,53 @@
 
       <a-nft
         type="nft"
-        url="ar.frame/marker"
+        url="assignment2/lego_piratesofthecarribbean"
         smooth="true"
         smoothCount="10"
         smoothTolerance=".01"
         smoothThreshold="5">
 
           <a-entity>
-            <a-entity gltf-model="url(shoe1/scene.gltf)" position="0.5 0 0.5" scale="1 1 1" rotation="-90 0 0"></a-entity>
-            <a-entity gltf-model="url(shoe2/scene.gltf)" position="-0.5 0 0.5" scale="1 1 1" rotation="-90 0 0"></a-entity>
-            <a-entity gltf-model="url(shoe3/scene.gltf)" position="-0.5 0.3 0.5" scale="1 1 1" rotation="-90 0 0"></a-entity>
+            <a-box position="-100 10 0" src="jacksparrow.png" rotation="" color="" shadow="" material="" geometry="" scale="200 20 200"></a-box>
 
           </a-entity>
 
+      </a-nft>
+
+            <a-nft
+        type="nft"
+        url="assignment2/lego_starwars"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5">
+          <a-entity>
+          	<a-box position="-100 10 0" src="bobafett.png" rotation="" color="" shadow="" material="" geometry="" scale="200 20 200"></a-box>
+          </a-entity>
+      </a-nft>
+
+            <a-nft
+        type="nft"
+        url="assignment2/lego_minions"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5">
+          <a-entity>
+          	<a-box position="-200 10 0" src="minions.png" rotation="" color="" shadow="" material="" geometry="" scale="200 20 200"></a-box>
+          </a-entity>
+      </a-nft>
+
+            <a-nft
+        type="nft"
+        url="assignment2/lego_harrypotter"
+        smooth="true"
+        smoothCount="10"
+        smoothTolerance=".01"
+        smoothThreshold="5">
+          <a-entity>
+          	<a-box position="-200 10 0" src="harrypotter.png" rotation="" color="" shadow="" material="" geometry="" scale="200 20 200"></a-box>
+          </a-entity>
       </a-nft>
 
       <a-entity camera></a-entity>
