@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Notepad</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="icon" type="image/png" href="http://icons.iconarchive.com/icons/hopstarter/sleek-xp-software/256/Notepad-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<link rel="stylesheet" href="assets/searchbar.css"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+#modal {
+	display: inline-block;
+	width: 800px;
+	position: fixed;
+	top: 30%;
+	left: calc(50% - 250px);
+	border: 1px solid black;
+	display: none;
+	word-break: break-all;
+	border-style: solid;
+    border-bottom-width: medium;
+}
+</style>
+</head>
+
+<body>
+
+	<main>
+		<header>
+		NOTEPAD
+		</header>
+
+
+</main>
+ <hr> 
+
+
+	</main>
+
+<div class="box">
+<div ng-app="sample" >
+  <div class="sample ten">
+    <input type="text" name="search" ng-model="usersearch" placeholder="search">
+    <button type="submit" class="btn btn-search">
+      <i class="fa fa-search"></i>
+    </button>
+		<button type="reset" class="btn btn-reset fa fa-times"></button>
+		<br><br><br>
+		<div style="width: 200px; height: 100px">
+			<input type="text" id="john" style="position:relative">
+			<br>
+			<br>
+			<br>
+			<a href="">
+			<h1  style="border-radius: 12px; color:black; position: relative; display:inline-block" onclick="saveme()">savenew</h1>
+			</a>
+			</div>
+
+  <table ng-controller="sampleController">
+    <thead>
+      <tr>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="there" ng-repeat="data in datas | filter:usersearch" >
+        <td style="border: 1px solid black; padding: 10px" onclick="openme(this.innerHTML)">{{ data }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  </div>
+
+</div>
+</div>
+
+
+
+
+
+
+<div id="modal"></div>
+
+  <script>
+
+		window.localStorage;
+			
+		var test = localStorage.getItem('testing');
+
+    if (test === undefined || test === null) {
+      localStorage.setItem('testing', '');
+      var test = localStorage.getItem('testing');	
+      var test_array = test.split('|');
+    } else {
+      var test_array = test.split('|');
+    }
+
+    angular.module('sample', []).controller('sampleController', ['$scope', function($scope) {
+          // $scope.datas = ['one', 'two', 'three'];
+          $scope.datas = test_array;
+      }]);
+
+
+      function saveme() {
+		var newvalue = document.getElementById('john').value;
+
+		window.localStorage;
+		var existing = localStorage.getItem('testing');
+
+		var existing_array = existing.split('|');
+		var allexists = '';
+		for (var i = 0; i < existing_array.length; i++) {
+			if (existing_array[i] !== '') {
+				allexists = allexists + existing_array[i] + '|';
+			}
+		}
+		all = allexists + newvalue; 
+
+		localStorage.setItem('testing', all);	
+		location.reload();
+	}
+
+  function deleteme(what_to_delete) {
+		window.localStorage;
+		var existing = localStorage.getItem('testing');
+
+		var existing_array = existing.split('|');
+		var allexists = '';
+		for (var i = 0; i < existing_array.length; i++) {
+			if (existing_array[i] !== '') {
+				if (existing_array[i] !== what_to_delete) {
+					allexists = allexists + existing_array[i] + '|';
+				}
+			}
+		}
+
+		localStorage.setItem('testing', allexists);	
+		location.reload();
+	}
+
+	function openme(x) {
+		document.getElementById('modal').innerHTML = x + '<center><br><button class="button1 buttonred" onclick="deleteme(\'' + x + '\')">DELETE</button><br><button class="button1 buttonblack" type="button" onclick="document.getElementById(\'modal\').style.display = \'none\'">CLOSE</button></center>';
+		document.getElementById('modal').style.display = 'block';
+	}
+    </script>
+</body>
+</html>
