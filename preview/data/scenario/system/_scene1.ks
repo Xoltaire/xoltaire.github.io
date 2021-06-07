@@ -1,0 +1,5 @@
+[preload  storage="./data/bgimage/Artboard_2.png"  ]
+[preload  storage="./data/bgimage/Artboard_1-100.jpg"  ]
+[preload  storage="./data/fgimage/chara/1/oli-surprised.PNG"  ]
+[preload  storage="./data/bgimage/kitchen.png"  ]
+[return]

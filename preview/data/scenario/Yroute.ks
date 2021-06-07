@@ -1,0 +1,101 @@
+[_tb_system_call storage=system/_Yroute.ks]
+
+*Ignore
+
+[bg  time="1000"  method="crossfade"  storage="Artboard_1-100.jpg"  ]
+[chara_show  name="Oliver"  time="1000"  wait="true"  storage="chara/1/Oliver_Dark.png"  width="612"  height="612"  reflect="true"  top="52"  left="330"  ]
+[chara_mod  name="Oliver"  time="600"  cross="true"  storage="chara/1/Oliver.png"  ]
+[tb_show_message_window  ]
+[tb_start_text mode=1 ]
+Oliver ignored her message.[p]
+[_tb_end_text]
+
+[chara_mod  name="Oliver"  time="600"  cross="true"  storage="chara/1/Oliver_Dark.png"  ]
+[chara_move  name="Oliver"  anim="true"  time="300"  effect="linear"  wait="true"  left="170"  top="52"  width="612"  height="612"  ]
+[chara_show  name="Joel"  time="1000"  wait="true"  storage="chara/4/joel-normal.PNG"  width="579"  height="579"  left="614"  top="78"  reflect="false"  ]
+[tb_start_text mode=1 ]
+Oh... alright. Then I guess it's just us then.[p]
+[_tb_end_text]
+
+[chara_mod  name="Joel"  time="600"  cross="true"  storage="chara/4/Joel_Dark.png"  ]
+[chara_mod  name="Oliver"  time="600"  cross="true"  storage="chara/1/oli-smile.PNG"  ]
+[tb_start_text mode=1 ]
+Well then, let's watch a movie here to pass the time.[p]
+
+[_tb_end_text]
+
+[chara_hide_all  time="1000"  wait="true"  ]
+[bg  time="1000"  method="crossfade"  storage="TV_Reporter.jpg"  ]
+[tb_start_text mode=1 ]
+2 HOURS LATER[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+"if you are within 6ft of them, there is a 90% chance of them getting infected."[p]
+[_tb_end_text]
+
+[bg  time="1000"  method="crossfade"  storage="living-room-100_1.png"  ]
+[chara_show  name="Oliver"  time="1000"  wait="true"  storage="chara/1/oli-frighten.PNG"  width="610"  height="610"  left="296"  top="88"  reflect="false"  ]
+[tb_start_text mode=1 ]
+Yeesh, good thing we didn't go outside today, huh bro?[p]
+[_tb_end_text]
+
+[chara_hide_all  time="1000"  wait="true"  ]
+[tb_start_text mode=1 ]
+<Suddenly, a knock on the door is heard. It’s… Mellissa>[p]
+[_tb_end_text]
+
+[bg  time="1000"  method="crossfade"  storage="gate.jpg"  ]
+[chara_show  name="Melissa"  time="1000"  wait="true"  storage="chara/5/mel-sad.PNG"  width="642"  height="642"  left="608"  top="97"  reflect="true"  ]
+[tb_start_text mode=1 ]
+Ollie? Babe, you didn’t text me earlier when it was time to go.[p]
+[_tb_end_text]
+
+[chara_mod  name="Melissa"  time="600"  cross="true"  storage="chara/5/mel-sick.png"  ]
+[tb_start_text mode=1 ]
+Are you alr-*coughcough*[p]
+[_tb_end_text]
+
+[chara_show  name="Oliver"  time="1000"  wait="true"  storage="chara/1/oli-frighten2.PNG"  width="610"  height="610"  left="20"  top="109"  reflect="true"  ]
+[tb_start_text mode=1 ]
+Oh- Oh God, Mellissa?[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+Ollies tries to open the door [p]
+to get her, but…[p]
+[_tb_end_text]
+
+[chara_move  name="Oliver"  anim="true"  time="300"  effect="linear"  wait="true"  left="188"  top="109"  width="610"  height="610"  ]
+[chara_show  name="Mother"  time="1000"  wait="true"  storage="chara/3/mother-mild-terrified.PNG"  width="676"  height="676"  left="-246"  top="77"  reflect="false"  ]
+[chara_move  name="Mother"  anim="true"  time="300"  effect="linear"  wait="true"  left="314"  top="77"  width="676"  height="676"  ]
+[chara_mod  name="Mother"  time="600"  cross="true"  storage="chara/3/mother-mild-terrified.PNG"  ]
+[chara_move  name="Oliver"  anim="true"  time="300"  effect="linear"  wait="true"  left="20"  top="74"  width="676"  height="676"  ]
+[chara_move  name="Mother"  anim="true"  time="300"  effect="linear"  wait="true"  left="180"  top="77"  width="676"  height="676"  ]
+[chara_mod  name="Oliver"  time="600"  cross="true"  storage="chara/1/Oliver_Dark.png"  ]
+[tb_start_text mode=1 ]
+Ollie no! You heard the news about the symptoms! She clearly has it, there’s nothing we can do![p]
+[_tb_end_text]
+
+[chara_mod  name="Oliver"  time="600"  cross="true"  storage="chara/1/oli-frighten2.PNG"  ]
+[tb_start_text mode=1 ]
+Please, let me just-[p]
+[_tb_end_text]
+
+[chara_hide  name="Mother"  time="1000"  wait="true"  pos_mode="true"  ]
+[chara_hide  name="Oliver"  time="1000"  wait="true"  pos_mode="true"  ]
+[bg  time="1000"  method="crossfade"  storage="black_bg.jpg"  ]
+[chara_mod  name="Melissa"  time="600"  cross="true"  storage="chara/5/mel-terrified2.png"  ]
+[chara_move  name="Melissa"  anim="true"  time="300"  effect="linear"  wait="true"  left="320"  top="480"  width="642"  height="642"  ]
+[chara_hide  name="Melissa"  time="1000"  wait="true"  pos_mode="true"  ]
+[tb_start_text mode=1 ]
+*Mellissa collapses to the ground. She’s not moving. Her lifeless body is laying in the front yard.[p]
+[_tb_end_text]
+
+[chara_show  name="Oliver"  time="1000"  wait="true"  storage="chara/1/oli-frighten2.PNG"  width="610"  height="610"  left="308"  top="86"  reflect="false"  ]
+[tb_start_text mode=1 ]
+nononononONONO-[p]
+[_tb_end_text]
+
+[chara_hide_all  time="1000"  wait="true"  ]
+[jump  storage="LV2.ks"  target=""  ]
